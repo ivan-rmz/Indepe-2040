@@ -1,0 +1,83 @@
+/* CSS HEX
+0- selective-yellow: #ffba00ff;
+5- pumpkin: #ff873fff;
+4- amaranth: #e52b50ff;
+7- lavender-floral: #b57edcff;
+3- argentinian-blue: #6cb4eeff;
+1- white: #ffffffff; background
+2- silver: #c0c0c0ff; accent
+6- raisin-black: #242124ff; secondary accent*/
+
+.container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #ffba00;
+    background: radial-gradient(circle, #ffba00 50%, #e52b50 100%);
+}
+
+.login-card {
+    width: 400px;
+    height: 400px;
+    background-color: #ffffffbb;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px #000;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+mat-card-title {
+    margin-bottom: 5%;
+}
+
+form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+mat-form-field {
+    width: 75%;
+    margin-bottom: 5%;
+}
+
+.mat-input-element {
+    caret-color: #e52b50ff;
+    color: red;
+}
+
+::ng-deep .mat-form-field.mat-focused .mat-form-field-label {
+    color: #e52b50ff !important;
+}
+
+::ng-deep .mat-focused .mat-form-field-underline .mat-form-field-ripple{
+    background-color: #e52b50ff !important;
+}
+
+.mat-mini-fab {
+    background-color: #ffffff00;
+}
+
+.mat-icon {
+    color: #b57edcff;
+    background-color: white;
+}
+
+button {
+    margin-top: 10%;
+    color: white;
+    background-color: #e52b50ff;
+}
+
+a {
+    margin-top: 10%;
+    color: white;
+    background-color: #607353;
+}

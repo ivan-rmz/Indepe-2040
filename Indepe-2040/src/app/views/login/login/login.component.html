@@ -1,1 +1,42 @@
-<p>login works!</p>
+<div class="container">
+    <mat-card class="login-card">
+        <mat-card-title>Inicio de sesión</mat-card-title>
+        <form [formGroup]="loginForm" autocomplete="off">
+
+            <mat-form-field>
+                <input matInput id="emailField" placeholder="Ingresa tu correo electrónico" type="email" name="email"
+                    formControlName="emailCtrl">
+                <mat-error
+                    *ngIf="loginForm.get('emailCtrl')!.hasError('required') && loginForm.get('emailCtrl')!.touched">
+                    El correo electrónico es requerido
+                </mat-error>
+                <mat-error *ngIf="loginForm.get('emailCtrl')!.hasError('email') && loginForm.get('emailCtrl')!.touched">
+                    El correo electrónico debe tener el formato correcto
+                </mat-error>
+            </mat-form-field>
+
+            <mat-form-field>
+                <mat-label>Ingresa tu contraseña</mat-label>
+                <input matInput id="pswdField" [type]="hide ? 'password' : 'text'" placeholder="Ingresa tu contraseña"
+                    formControlName="passwordCtrl" name="password">
+                <button mat-mini-fab matSuffix (click)="hide = !hide" [attr.aria-label]="'Ocultar contraseña'"
+                    [attr.aria-pressed]="hide">
+                    <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                </button>
+                <mat-error
+                    *ngIf="loginForm.get('passwordCtrl')!.hasError('required') && loginForm.get('passwordCtrl')!.touched">
+                    La contraseña es requerida
+                </mat-error>
+            </mat-form-field>
+
+            <mat-card-actions>
+                <button mat-raised-button id="loginBtn" type="submit" (click)="onLogin([loginForm.get('emailCtrl'), loginForm.get('passwordCtrl')])"  [disabled]="!loginForm.valid">
+                    Iniciar sesión
+                </button>
+            </mat-card-actions>
+            <mat-error *ngIf="loginFailed">
+                El correo electrónico o la contraseña son incorrectos
+            </mat-error>
+        </form>
+    </mat-card>
+</div>
