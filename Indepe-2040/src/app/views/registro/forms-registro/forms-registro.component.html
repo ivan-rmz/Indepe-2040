@@ -1,0 +1,151 @@
+<h1>Hoja de Registro</h1>
+<mat-stepper orientation="vertical" [linear]="false" #stepper>
+    <mat-step>
+        <ng-template matStepLabel>Nino</ng-template>
+        <mat-stepper [linear]="false" #stepper>
+            <mat-step [stepControl]="firstFormGroup">
+                <form [formGroup]="firstFormGroup">
+                    <ng-template matStepLabel>Datos Personales</ng-template>
+                    <div>
+                        <mat-form-field appearance="fill">
+                            <mat-label>
+                                Nombre
+                            </mat-label>
+                            <input matInput placeholder="Nombre" formControlName="nombre" required>
+                        </mat-form-field>
+                        <mat-checkbox> Foto</mat-checkbox>
+                        <mat-form-field>
+                            <mat-select required>
+                                <mat-option value="one">Mujer</mat-option>
+                                <mat-option value="two">Hombre</mat-option>
+                            </mat-select>
+                            <mat-label>Sexo</mat-label>
+                        </mat-form-field>
+                    </div>
+                    <div>
+                        <mat-form-field appearance="fill">
+                            <mat-label>
+                                Apellido Paterno
+                            </mat-label>
+                            <input matInput placeholder="Nombre" formControlName="nombre" required>
+                        </mat-form-field>
+                        <mat-form-field>
+                            <mat-select required>
+                                <mat-option value="one">P2040</mat-option>
+                                <mat-option value="two">F2040</mat-option>
+                                <mat-option value="three">R2040</mat-option>
+                                <mat-option value="four">C2040</mat-option>
+                            </mat-select>
+                            <mat-label>Persona 2040</mat-label>
+                        </mat-form-field>
+                        <mat-form-field appearance="fill">
+                            <mat-label>
+                                CURP
+                            </mat-label>
+                            <input matInput placeholder="Nombre" formControlName="nombre" required>
+                        </mat-form-field>
+                    </div>
+                    <div>
+                        <mat-form-field appearance="fill">
+                            <mat-label>
+                                Apellido Materno
+                            </mat-label>
+                            <input matInput placeholder="Nombre" formControlName="nombre" required>
+                        </mat-form-field>
+                        <mat-form-field appearance="fill">
+                            <mat-label>
+                                Fecha de nacimiento
+                            </mat-label>
+                            <input matInput placeholder="Nombre" formControlName="nombre" required>
+                        </mat-form-field>
+                        <mat-checkbox> Fecha tentativa de nacimiento </mat-checkbox>
+                        <mat-form-field appearance="fill">
+                            <mat-label>
+                                Telefono
+                            </mat-label>
+                            <input matInput placeholder="Nombre" formControlName="nombre" required>
+                        </mat-form-field>
+                    </div>
+                    <div>
+                        <mat-form-field appearance="fill">
+                            <mat-select required>
+                                <mat-option value="one">Boca en boca</mat-option>
+                                <mat-option value="two">El Plan me busco</mat-option>
+                                <mat-option value="three">Recomendacion de un conocido</mat-option>
+                            </mat-select>
+                            <mat-label>¿Cómo te enteraste del plan?</mat-label>
+                        </mat-form-field>
+                    </div>
+                    <h2>Acompañamiento</h2>
+                    <div>
+                        <mat-form-field appearance="fill">
+                            <mat-label>
+                                Responsable
+                            </mat-label>
+                            <input matInput placeholder="Nombre" formControlName="nombre" required>
+                        </mat-form-field>
+                        <mat-form-field appearance="fill">
+                            <mat-select required>
+                                <mat-option value="one">Activo</mat-option>
+                                <mat-option value="two">Inactivo</mat-option>
+                                <mat-option value="three">Por contactar</mat-option>
+                                <mat-option value="four">Fallecido</mat-option>
+                            </mat-select>
+                            <mat-label>Estatus</mat-label>
+                        </mat-form-field>
+                    </div>
+                </form>
+            </mat-step>
+            <mat-step [stepControl]="firstFormGroup">
+                <form [formGroup]="firstFormGroup">
+                    <ng-template matStepLabel>Ubicación</ng-template>
+                    <mat-form-field appearance="fill">
+                        <mat-label>
+                            Estado
+                        </mat-label>
+                        <input matInput placeholder="Nombre" formControlName="nombre" required>
+                    </mat-form-field>
+                </form>
+            </mat-step>
+            <mat-step [stepControl]="firstFormGroup">
+                <form [formGroup]="firstFormGroup">
+                    <ng-template matStepLabel>Familia</ng-template>
+                    <mat-form-field appearance="fill">
+                        <mat-label>
+                            Nombre
+                        </mat-label>
+                        <input matInput placeholder="Nombre" formControlName="nombre" required>
+                    </mat-form-field>
+                </form>
+            </mat-step>
+            <mat-step [stepControl]="firstFormGroup">
+                <form [formGroup]="firstFormGroup">
+                    <ng-template matStepLabel>Salud</ng-template>
+                    <mat-form-field appearance="fill">
+                        <mat-label>
+                            Nombre
+                        </mat-label>
+                        <input matInput placeholder="Nombre" formControlName="nombre" required>
+                    </mat-form-field>
+                </form>
+            </mat-step>
+            <mat-step [stepControl]="firstFormGroup">
+                <form [formGroup]="firstFormGroup">
+                    <ng-template matStepLabel>Espiritualidad</ng-template>
+                    <mat-form-field appearance="fill">
+                        <mat-label>
+                            Nombre
+                        </mat-label>
+                        <input matInput placeholder="Nombre" formControlName="nombre" required>
+                    </mat-form-field>
+                </form>
+            </mat-step>
+        </mat-stepper>
+    </mat-step>
+    <mat-step>
+        <ng-template matStepLabel>Madre</ng-template>
+    </mat-step>
+    <mat-step>
+        <ng-template matStepLabel>Padre</ng-template>
+    </mat-step>
+</mat-stepper>

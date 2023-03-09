@@ -8,6 +8,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { LoginModule } from './views/login/login.module';
 import {MatIconModule } from '@angular/material/icon';
 import { MatCardModule } from '@angular/material/card';
+import { AngularMaterialModule } from './shared/angular-material/angular-material.module';
+import { RegistroModule } from './views/registro/registro.module';
 
 @NgModule({
   declarations: [
@@ -19,9 +21,11 @@ import { MatCardModule } from '@angular/material/card';
     BrowserAnimationsModule,
     MatFormFieldModule,
     LoginModule,
+    RegistroModule,
     MatFormFieldModule,
     MatIconModule,
-    MatCardModule
+    MatCardModule,
+    AngularMaterialModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
