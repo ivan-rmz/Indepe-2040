@@ -3,8 +3,8 @@
     <mat-step>
         <ng-template matStepLabel>Nino</ng-template>
         <mat-stepper [linear]="false" #stepper>
-            <mat-step [stepControl]="firstFormGroup">
-                <form [formGroup]="firstFormGroup">
+            <mat-step [stepControl]="datosGeneralesInfanteFormGroup">
+                <form [formGroup]="datosGeneralesInfanteFormGroup">
                     <ng-template matStepLabel>Datos Personales</ng-template>
                     <div>
                         <mat-form-field appearance="fill">
@@ -13,9 +13,9 @@
                             </mat-label>
                             <input matInput placeholder="Nombre" formControlName="nombre" required>
                         </mat-form-field>
-                        <mat-checkbox> Foto</mat-checkbox>
+                        <mat-checkbox formControlName="foto"> Foto</mat-checkbox>
                         <mat-form-field>
-                            <mat-select required>
+                            <mat-select formControlName="sexo" required>
                                 <mat-option value="one">Mujer</mat-option>
                                 <mat-option value="two">Hombre</mat-option>
                             </mat-select>
@@ -27,10 +27,10 @@
                             <mat-label>
                                 Apellido Paterno
                             </mat-label>
-                            <input matInput placeholder="Nombre" formControlName="nombre" required>
+                            <input matInput placeholder="Apellido Paterno" formControlName="apellido_p" required>
                         </mat-form-field>
                         <mat-form-field>
-                            <mat-select required>
+                            <mat-select  formControlName="persona_2040" required>
                                 <mat-option value="one">P2040</mat-option>
                                 <mat-option value="two">F2040</mat-option>
                                 <mat-option value="three">R2040</mat-option>
@@ -42,7 +42,7 @@
                             <mat-label>
                                 CURP
                             </mat-label>
-                            <input matInput placeholder="Nombre" formControlName="nombre" required>
+                            <input matInput placeholder="CURP" formControlName="CURP" required>
                         </mat-form-field>
                     </div>
                     <div>
@@ -50,24 +50,24 @@
                             <mat-label>
                                 Apellido Materno
                             </mat-label>
-                            <input matInput placeholder="Nombre" formControlName="nombre" required>
+                            <input matInput placeholder="Apellido Materno" formControlName="apellido_m" required>
                         </mat-form-field>
                         <mat-form-field appearance="fill">
                             <mat-label>
                                 Fecha de nacimiento
                             </mat-label>
-                            <input matInput placeholder="Nombre" formControlName="nombre" required>
+                            <input matInput placeholder="Fecha de Nacimiento" formControlName="fecha_nacimiento" required>
                         </mat-form-field>
-                        <mat-checkbox> Fecha tentativa de nacimiento </mat-checkbox>
+                        <mat-checkbox formControlName="fecha_tentativa_nacimiento"> Fecha tentativa de nacimiento </mat-checkbox>
                         <mat-form-field appearance="fill">
                             <mat-label>
                                 Telefono
                             </mat-label>
-                            <input matInput placeholder="Nombre" formControlName="nombre" required>
+                            <input matInput placeholder="Telefono" formControlName="telefono" required>
                         </mat-form-field>
                     </div>
                     <div>
-                        <mat-form-field appearance="fill">
+                        <mat-form-field appearance="fill" formControlName="canal_difusion_plan">
                             <mat-select required>
                                 <mat-option value="one">Boca en boca</mat-option>
                                 <mat-option value="two">El Plan me busco</mat-option>
@@ -82,10 +82,10 @@
                             <mat-label>
                                 Responsable
                             </mat-label>
-                            <input matInput placeholder="Nombre" formControlName="nombre" required>
+                            <input matInput placeholder="Responsable" formControlName="responsable" required>
                         </mat-form-field>
                         <mat-form-field appearance="fill">
-                            <mat-select required>
+                            <mat-select required formControlName="estatus_acomp">
                                 <mat-option value="one">Activo</mat-option>
                                 <mat-option value="two">Inactivo</mat-option>
                                 <mat-option value="three">Por contactar</mat-option>
@@ -95,6 +95,9 @@
                         </mat-form-field>
                     </div>
                 </form>
+                <div>
+                    <button mat-raised-button color="warn" mat-dialog-close>JALARA?</button>
+                </div>
             </mat-step>
             <mat-step [stepControl]="firstFormGroup">
                 <form [formGroup]="firstFormGroup">
