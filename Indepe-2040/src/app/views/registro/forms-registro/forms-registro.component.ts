@@ -10,6 +10,7 @@ import { LocationService } from 'src/app/services/location.service';
 export class FormsRegistroComponent implements OnInit{
   datosGeneralesInfanteFormGroup !: FormGroup;
   firstFormGroup !: FormGroup;
+  ubicacionInfanteFormGroup !: FormGroup;
 
   ngOnInit(): void {
     this.datosGeneralesInfanteFormGroup = this._formBuilder.group({
@@ -31,6 +32,22 @@ export class FormsRegistroComponent implements OnInit{
     this.firstFormGroup = this._formBuilder.group({
       nombre: [null, Validators.required],
     });
+    this.ubicacionInfanteFormGroup = this._formBuilder.group({
+      estado: [null, Validators.required],
+      municipio: [null, Validators.required],
+      localidad: [null, Validators.required],
+      colonia: [null, Validators.required],
+      calle: [null, Validators.required],
+      num_exterior: [null, Validators.required],
+      num_interior: [null],
+      cp: [null, Validators.required],
+      entre_calles: [null],
+      referencias: [null],
+    });
+  }
+  hacerRegistro() : void {
+    console.log("click en jalar jiji");
+    console.log(this.datosGeneralesInfanteFormGroup.value);
   }
   country = new FormControl(null, [Validators.required]);
   state = new FormControl({ value: null, disabled: true }, [
